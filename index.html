@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; worker-src 'self' blob:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Cómo se hizo Valonia, un diario en video de trece días a pie por Bélgica, hecho en conversación con Claude: las fuentes, los conceptos, los pivots y el ida y vuelta.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="vendor/fonts/lora-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<title>Valonia: making of</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%230B0C0E%22/%3E%3Cpath d=%22M16 27 C 12 21, 20 15, 15 5%22 fill=%22none%22 stroke=%22%23F6C945%22 stroke-width=%222.2%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/fonts.css">
+<link rel="stylesheet" href="proceso.css">
+</head>
+<body>
+<main id="deck">
+
+  <section class="slide cover" data-section="Inicio">
+    <div class="cover-text">
+      <h1>Valonia</h1>
+      <p class="sub">Making of</p>
+      <p class="by"><span>Pablo Fernández Vallejo</span><span>Octubre 2026</span></p>
+    </div>
+    <figure class="cover-map" data-map="cover"></figure>
+  </section>
+
+  <section class="slide full" data-section="Fuentes">
+    <header><h2>Fuentes de información</h2><p class="when">Julio 2025</p></header>
+    <div class="sources" id="fuentes"></div>
+  </section>
+
+  <section class="slide full" data-section="Claude Code">
+    <header><h2>Hecho con Claude Code</h2><h3>Una conversación que trabaja dentro de una carpeta</h3></header>
+    <div class="cc" id="cc"></div>
+  </section>
+
+  <section class="slide full" data-section="Conceptos">
+    <header><h2>Tres conceptos</h2><p class="when">23 sep – 19 oct</p></header>
+    <ol class="triptych">
+      <li><img alt="" data-src="capturas/02-primer-atlas.webp"><span class="date">23 – 26 sep</span><b>El atlas</b><p>El viaje como archivo: el recorrido, el diario, las fotos, sobre un mapa.</p></li>
+      <li><img alt="" data-src="capturas/44-onfoot-camino.webp"><span class="date">28 sep</span><b>A pie</b><p>El viaje caminado otra vez, entre un video y el siguiente.</p></li>
+      <li><img alt="" data-src="capturas/41-hoy.webp"><span class="date">28 sep – 19 oct</span><b>La película</b><p>Los videos en orden, con su sonido, junto a un mapa que camina con ellos.</p></li>
+    </ol>
+  </section>
+
+  <section class="slide" data-section="El atlas">
+    <header><h2>El atlas</h2><h3>Lo que pedí</h3><p class="when">23 sep</p></header>
+    <ol class="log">
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>Hice un par de caminatas largas, en Argentina y en Bélgica. Tengo fotos, entradas de diario y otras cosas. Quiero una página personal con mapas, lugares e imágenes.</q></li>
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>No busco estadísticas sino un testimonio del viaje: ubicar todo en un mapa, acercarme y ver fotos, el diario, dónde dormí, el camino que hice. Mapas detallados, con estilo propio. Algo que crezca con nuevos viajes.</q></li>
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>Que esté hecho desde cero para poder hacerse público algún día, y para que siga existiendo aunque cambie de computadora.</q></li>
+      <li class="row ai"><span class="tag"><b>Claude</b>resultado</span><p>Un mapa que no cargó. Después, el atlas: el recorrido, el diario anclado a los lugares, dónde dormí.</p></li>
+    </ol>
+    <div class="pics">
+      <figure><img alt="" data-src="capturas/01-mapa-en-blanco.webp"><figcaption>La primera respuesta</figcaption></figure>
+      <figure><img alt="" data-src="capturas/02-primer-atlas.webp"><figcaption>El primer atlas</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="slide pivot" data-section="El atlas">
+    <header><h2>El atlas</h2><h3>El pivot</h3><p class="when">25 – 28 sep</p></header>
+    <ol class="log">
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>La navegación debería ser más inmersiva: que al pasar los días el mapa me lleve, acercándose a momentos, fluido, como si paseáramos.</q></li>
+      <li class="row ai"><span class="tag"><b>Claude</b>resultado</span><p>Trenes como líneas de metro, edificios en 3D, fotos y videos, un modo para recorrerlo sin el diario.</p></li>
+      <li class="row me fb big"><span class="tag"><b>Pablo</b>devolución</span><q>Parece tarjetas sobre tarjetas. Demasiado funcional. Demasiado seco. Quiero algo más audaz, más de creative coding.</q></li>
+    </ol>
+    <div class="pics">
+      <figure><img alt="" data-src="capturas/03-atlas-3d.webp"><figcaption>Tournai en 3D</figcaption></figure>
+      <figure><img alt="" data-src="capturas/04-atlas-trenes.webp"><figcaption>Los trenes, estación por estación</figcaption></figure>
+      <figure><img alt="" data-src="capturas/05-atlas-wander.webp"><figcaption>Fotos y videos, sin el diario</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="slide full" data-section="El atlas">
+    <header><h2>El atlas</h2><h3>Las fuentes</h3><p class="when">26 sep</p></header>
+    <figure class="flow"><svg data-flow="1" viewBox="0 0 1240 470" role="img" aria-label="Las fuentes que usó el atlas"></svg></figure>
+  </section>
+
+  <section class="slide" data-section="A pie">
+    <header><h2>A pie</h2><h3>Lo que pedí</h3><p class="when">28 sep</p></header>
+    <ol class="log">
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>Quiero una especie de máquina flâneur, hecha de videos: verticales, cortos, con sonido. Cómo se ve atravesar un país caminando, en primera persona.</q></li>
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>La tensión entre la belleza y el aburrimiento es el corazón del proyecto: el ritmo de la caminata tiene que sentirse en toda la experiencia.</q></li>
+      <li class="row ai prop"><span class="tag"><b>Claude</b>propuesta</span><p>«A pie»: una máquina para volver a caminar el viaje. Entre video y video, el mapa es memoria.</p></li>
+    </ol>
+    <div class="pics">
+      <figure><img alt="" data-src="capturas/42-onfoot-inicio.webp"><figcaption>Elegir el ritmo</figcaption></figure>
+      <figure><img alt="" data-src="capturas/43-onfoot-video.webp"><figcaption>Un video, con el reloj y los kilómetros del día</figcaption></figure>
+      <figure><img alt="" data-src="capturas/44-onfoot-camino.webp"><figcaption>El camino entre dos videos</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="slide pivot" data-section="A pie">
+    <header><h2>A pie</h2><h3>El pivot</h3><p class="when">28 sep</p></header>
+    <ol class="log">
+      <li class="row me fb big"><span class="tag"><b>Pablo</b>devolución</span><q>Lo que me gustó fue apretar «siguiente» todo el tiempo y ver un flujo continuo de video. Los momentos del medio no funcionaron.</q></li>
+    </ol>
+    <div class="pics">
+      <figure><img alt="" data-src="capturas/44-onfoot-camino.webp"><figcaption>Los momentos del medio</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="slide full" data-section="A pie">
+    <header><h2>A pie</h2><h3>Las fuentes</h3><p class="when">28 sep</p></header>
+    <figure class="flow"><svg data-flow="2" viewBox="0 0 1240 470" role="img" aria-label="Las fuentes que usó A pie"></svg></figure>
+  </section>
+
+  <section class="slide" data-section="La película">
+    <header><h2>La película</h2><h3>Lo que pedí</h3><p class="when">28 sep</p></header>
+    <ol class="log">
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>Quiero algo que ubique lo que muestran los videos: en el mapa, en el tiempo, en kilómetros. Que empiece cuando salgo de la casa en Lille y termine en Maastricht.</q></li>
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>Proponeme algunas ideas y elijo.</q></li>
+      <li class="row ai prop"><span class="tag"><b>Claude</b>propuesta</span><p>Cuatro ideas. «Mi elección: la 1 y la 3, juntas.»</p></li>
+    </ol>
+    <div class="ideas" id="ideas"></div>
+  </section>
+
+  <section class="slide pivot" data-section="La película">
+    <header><h2>La película</h2><h3>El pivot</h3><p class="when">28 sep</p></header>
+    <ol class="log">
+      <li class="row me pick big"><span class="tag"><b>Pablo</b>elección</span><q>La 1 y la 3. Pero la línea no tiene que ser de metro: algo geográficamente fiel. Un mapa vertical, con el este arriba, que acompañe el camino.</q></li>
+    </ol>
+    <div class="pics">
+      <figure><img alt="" data-src="capturas/10-reel1-pelicula.webp"><figcaption>La primera película: reloj, video y un mapa con el este arriba</figcaption></figure>
+      <figure><img alt="" data-src="capturas/11-reel1-mapa.webp"><figcaption>Todo el camino, y una película elegida en él</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="slide" data-section="La película">
+    <header><h2>La película</h2><h3>La portada</h3><p class="when">29 – 30 sep</p></header>
+    <ol class="log">
+      <li class="row me fb"><span class="tag"><b>Pablo</b>devolución</span><q>Todavía no me convencen los tres botones.</q></li>
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>Proponé tres alternativas y elijo.</q></li>
+      <li class="row ai prop"><span class="tag"><b>Claude</b>propuesta</span><p>A, B y C. «Mi elección: B, con la jerarquía de A.»</p></li>
+      <li class="row me pick"><span class="tag"><b>Pablo</b>elección</span><q>Vamos con B, con la jerarquía de A.</q></li>
+    </ol>
+    <div class="cover-story">
+      <div class="options" id="opciones"></div>
+      <div class="pics">
+        <figure><img alt="" data-src="capturas/09-reel1-portada.webp"><figcaption>La primera portada, en inglés</figcaption></figure>
+        <figure><img alt="" data-src="capturas/14-portada-tres-botones.webp"><figcaption>Tres botones</figcaption></figure>
+        <figure><img alt="" data-src="capturas/16-portada-fragmentos.webp"><figcaption>Fragmentos de video detrás del título</figcaption></figure>
+        <figure><img alt="" data-src="capturas/17-portada-valonia.webp"><figcaption>«Valonia»</figcaption></figure>
+        <figure><img alt="" data-src="capturas/18-portada-hoy.webp"><figcaption>Un solo botón: la elección</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="La película">
+    <header><h2>La película</h2><h3>El detalle</h3><p class="when">29 sep – 4 oct</p></header>
+    <ol class="log">
+      <li class="row me fb"><span class="tag"><b>Pablo</b>devolución</span><div><div class="wall" id="rebotes"></div></div></li>
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>En Flénu tomé el bus 6 hasta la estación de Mons. El punto del mapa podría ser un bus.</q></li>
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>Quiero caminos más fieles a lo que pasó.</q></li>
+    </ol>
+    <div class="pics">
+      <figure><img alt="" data-src="capturas/20-bus.webp"><figcaption>El bus 6, de Flénu a Mons</figcaption></figure>
+      <figure><img alt="" data-src="capturas/21-tren.webp"><figcaption>Filmado a bordo: el punto avanza con el tren</figcaption></figure>
+      <figure><img alt="" data-src="capturas/22-metro.webp"><figcaption>El metro de Charleroi</figcaption></figure>
+      <figure><img alt="" data-src="capturas/30-malonne.webp"><figcaption>Cada video en su lugar y en su orden</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="slide" data-section="La película">
+    <header><h2>La película</h2><h3>Hilando fino</h3><p class="when">3 – 19 oct</p></header>
+    <ol class="log">
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>Quiero ver en 3D la geometría aproximada de lo que muestran los videos.</q></li>
+      <li class="row me fb"><span class="tag"><b>Pablo</b>devolución</span><q>Hay un rectángulo negro en la portada. El mapa salta entre video y video. Quiero una línea curva y natural, como mi camino.</q></li>
+      <li class="row me"><span class="tag"><b>Pablo</b>pedido</span><q>Quiero publicarla: algo accesible desde cualquier lado.</q></li>
+      <li class="row me fb"><span class="tag"><b>Pablo</b>devolución</span><q>Toqué «volver» en el mapa y no funcionaba. No se podían saltear videos.</q></li>
+    </ol>
+    <div class="pics">
+      <figure><img alt="" data-src="capturas/27-3d-namur.webp"><figcaption>Namur en 3D, con relieve</figcaption></figure>
+      <figure><img alt="" data-src="capturas/33-rectangulo-negro.webp"><figcaption>El rectángulo negro</figcaption></figure>
+      <figure><img alt="" data-src="capturas/34-linea-curva.webp"><figcaption>La línea, curva</figcaption></figure>
+      <figure><img alt="" data-src="capturas/35-tel-pelicula.webp"><figcaption>En el teléfono</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="slide full" data-section="La película">
+    <header><h2>La película</h2><h3>Las fuentes</h3><p class="when">19 oct</p></header>
+    <figure class="flow"><svg data-flow="3" viewBox="0 0 1240 470" role="img" aria-label="Las fuentes que quedaron en la película"></svg></figure>
+  </section>
+
+  <section class="slide full" data-section="Aprendizajes">
+    <header><h2>Cómo pedir</h2><h3>El arte de dar feedback</h3></header>
+    <ol class="lessons" id="lecciones"></ol>
+  </section>
+
+  <section class="slide full" data-section="Aprendizajes">
+    <header><h2>De la materia prima al sitio</h2></header>
+    <ol class="pipe">
+      <li><span class="n">1</span><i class="ico" data-ico="1"></i><b>Lo original</b><p>Videos, fotos, recorridos, diario. No se toca nunca.</p></li>
+      <li><span class="n">2</span><i class="ico" data-ico="2"></i><b>Ordenar</b><p>Cada video, con su hora y su lugar.</p></li>
+      <li><span class="n">3</span><i class="ico" data-ico="4"></i><b>Mostrar</b><p>El navegador junta video, mapa y reloj.</p></li>
+      <li><span class="n">4</span><i class="ico" data-ico="5"></i><b>Probar</b><p>Un robot lo recorre como una persona, en computadora y teléfono.</p></li>
+    </ol>
+  </section>
+
+  <section class="slide full" data-section="El ida y vuelta">
+    <header><h2>El ida y vuelta</h2><p class="when">23 sep – 19 oct</p></header>
+    <div class="tally" id="ida"></div>
+  </section>
+
+  <section class="slide cover thanks" data-section="Gracias">
+    <div class="cover-text">
+      <h1>Gracias</h1>
+      <p class="url">pablitofv.github.io/Wallonia</p>
+      <div class="qr" id="qr"></div>
+      <p class="by"><span>Pablo Fernández Vallejo</span><span>Mapa: © OpenStreetMap · Protomaps</span></p>
+    </div>
+    <figure class="cover-map" data-map="thanks"></figure>
+  </section>
+
+</main>
+
+<nav id="line" aria-label="Partes"></nav>
+<div id="zoom" hidden><img alt=""></div>
+<script type="module" src="proceso.js"></script>
+</body>
+</html>
